@@ -47,6 +47,8 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 /* ────────────────────────────────────────────────────────────────
@@ -371,6 +373,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg) var(--spacing-xl);
+    padding-bottom: calc(var(--spacing-xl) * 2);
 }
 
 .section-title {
@@ -971,6 +974,7 @@ body {
 .surprise-section {
     margin-bottom: var(--spacing-xl);
     text-align: center;
+    padding-bottom: var(--spacing-xl);
 }
 
 .surprise-container {
@@ -978,18 +982,21 @@ body {
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
 }
 
 .hidden-message {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.6s ease-out, opacity 0.6s ease-out;
+    transition: max-height 0.8s ease-out, opacity 0.6s ease-out;
+    width: 100%;
 }
 
 .hidden-message.revealed {
-    max-height: 800px;
+    max-height: 3000px;
     opacity: 1;
+    overflow: visible;
 }
 
 .surprise-card {
@@ -997,6 +1004,19 @@ body {
     border: 3px solid var(--color-red);
     text-align: center;
     animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    padding: var(--spacing-lg);
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Surprise card with background image */
+.surprise-card-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 248, 250, 0.70)), url('../asset/future.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
 }
 
 @keyframes popIn {
@@ -1025,6 +1045,7 @@ body {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     color: var(--color-red);
     margin-bottom: var(--spacing-md);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
 .surprise-text {
@@ -1032,12 +1053,18 @@ body {
     line-height: 1.8;
     margin-bottom: var(--spacing-md);
     color: var(--color-text);
+    text-align: left;
+    padding: 0 var(--spacing-sm);
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
 .surprise-text-small {
     font-size: 1rem;
     font-style: italic;
     color: var(--color-red);
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
 /* ────────────────────────────────────────────────────────────────
@@ -1049,6 +1076,8 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin: var(--spacing-xl) 0;
+    padding-top: var(--spacing-lg);
+    clear: both;
 }
 
 /* ────────────────────────────────────────────────────────────────
@@ -1124,6 +1153,30 @@ body {
     .timeline-content {
         text-align: left;
     }
+    
+    /* Surprise section mobile adjustments */
+    .surprise-card {
+        padding: var(--spacing-md);
+        max-width: 100%;
+    }
+    
+    /* Make background more visible on tablets */
+    .surprise-card-bg {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 248, 250, 0.65)), url('../asset/future.jpeg');
+    }
+    
+    .surprise-text {
+        font-size: 1.1rem;
+        padding: 0 var(--spacing-xs);
+    }
+    
+    .surprise-title {
+        font-size: 1.6rem;
+    }
+    
+    .surprise-icon {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1137,7 +1190,7 @@ body {
     }
     
     .content-wrapper {
-        padding: 0 var(--spacing-md) var(--spacing-lg);
+        padding: 0 var(--spacing-md) var(--spacing-xl);
     }
     
     .certificate-banner, .certificate-ribbon {
@@ -1183,6 +1236,50 @@ body {
     
     .certificate-text p {
         font-size: 1rem;
+    }
+    
+    /* Surprise section small screen */
+    .surprise-section {
+        margin-bottom: var(--spacing-lg);
+        padding-bottom: calc(var(--spacing-xl) * 2);
+    }
+    
+    .surprise-card {
+        padding: var(--spacing-md) var(--spacing-sm);
+        border-radius: 15px;
+    }
+    
+    /* Make background more visible on small screens */
+    .surprise-card-bg {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 248, 250, 0.60)), url('../asset/future.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+    
+    .surprise-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .surprise-text-small {
+        font-size: 1.1rem;
+        margin-top: var(--spacing-md);
+    }
+    
+    .surprise-title {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .surprise-icon {
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hidden-message.revealed {
+        max-height: none;
     }
 }
 
