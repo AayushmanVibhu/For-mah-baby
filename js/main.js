@@ -240,11 +240,8 @@ function fillCertificateDate() {
     const dateElement = document.getElementById('certificateDate');
     if (!dateElement) return;
     
-    const today = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = today.toLocaleDateString('en-US', options);
-    
-    dateElement.textContent = formattedDate;
+    // Set to our special date: 14th February 2026
+    dateElement.textContent = 'February 14, 2026';
 }
 
 // ────────────────────────────────────────────────────────────────
