@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LET'S GOOOOO 💘</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="hellyes-page">
+    <!-- 
+    ═══════════════════════════════════════════════════════════════
+    📝 CUSTOMIZATION NOTES:
+    ═══════════════════════════════════════════════════════════════
+    
+    1. CERTIFICATE:
+       - Update "herName" and "yourName" in the certificate below
+       - The date will auto-fill with today's date via JavaScript
+    
+    2. MEMORY LANE TIMELINE:
+       - Update the 4 timeline moments below
+       - Replace images: cutie.jpeg, kissi.jpeg, future.jpeg, collage.jpeg
+       - Edit the titles and descriptions
+    
+    3. SECRET SURPRISE MESSAGE:
+       - Find the hidden-message section
+       - Replace with your final surprise message!
+    
+    ═══════════════════════════════════════════════════════════════
+    -->
+
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1 class="page-title glow-text">LET'S GOOOOO 💘</h1>
+        <p class="page-subtitle">you just made me smile so hard</p>
+    </header>
+
+    <!-- Main content -->
+    <main class="content-wrapper">
+        
+        <!-- SECTION 1: Valentine Certificate -->
+        <section class="certificate-section">
+            <div class="card certificate-card" style="background-image: linear-gradient(rgba(255, 248, 240, 0.95), rgba(255, 229, 236, 0.96)), url('asset/collage.jpeg'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                <div class="certificate-border">
+                    <!-- Corner decorations -->
+                    <div class="certificate-corner certificate-corner-tl">💕</div>
+                    <div class="certificate-corner certificate-corner-tr">💕</div>
+                    <div class="certificate-corner certificate-corner-bl">💖</div>
+                    <div class="certificate-corner certificate-corner-br">💖</div>
+                    
+                    <div class="certificate-content">
+                        <!-- Top decorative banner -->
+                        <div class="certificate-banner">
+                            <span class="banner-heart">💝</span>
+                            <span class="banner-text">~ Official Love Document ~</span>
+                            <span class="banner-heart">💝</span>
+                        </div>
+                        
+                        <h2 class="certificate-title">💕 Valentine's Day Certificate 💕</h2>
+                        <div class="certificate-seal">✨</div>
+                        
+                        <!-- Decorative divider -->
+                        <div class="certificate-divider">
+                            <span>❤️</span>
+                            <span class="divider-line"></span>
+                            <span>💕</span>
+                            <span class="divider-line"></span>
+                            <span>❤️</span>
+                        </div>
+                        
+                        <div class="certificate-text">
+                            <p style="font-size: 1rem; margin-bottom: 0.5rem;">✨ Be it known to all that ✨</p>
+                            <p style="margin-bottom: 1rem;">This certifies that</p>
+                            <!-- ✏️ EDIT HER NAME HERE -->
+                            <p class="certificate-name" id="herName">Pragya "totu" Mehrotra</p>
+                            <p style="margin: 0.5rem 0;">💝</p>
+                            <p>has officially and joyfully agreed to be the Valentine of</p>
+                            <!-- ✏️ EDIT YOUR NAME HERE -->
+                            <p class="certificate-name" id="yourName">Aayushman "angrez" Vibhu</p>
+                            <p style="margin: 0.5rem 0;">💗</p>
+                            <p style="margin-bottom: 0.3rem;">on this special day of</p>
+                            <p class="certificate-date" id="certificateDate">February 14, 2026</p>
+                            
+                            <!-- Love declaration box -->
+                            <div class="love-declaration">
+                                <p style="font-style: italic; font-size: 1rem; margin: 0;">
+                                    "Together forever, never apart.<br>
+                                    Maybe in distance, but never in heart." 💕
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Decorative divider -->
+                        <div class="certificate-divider">
+                            <span>💖</span>
+                            <span class="divider-line"></span>
+                            <span>💘</span>
+                            <span class="divider-line"></span>
+                            <span>💖</span>
+                        </div>
+                        
+                        <div class="certificate-signature">
+                            <div class="signature-line">
+                                <div class="signature-hearts">💕 ♥ 💕</div>
+                                <div class="signature">~ Sealed with Love ~</div>
+                                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Forever & Always 💖</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Bottom decorative ribbon -->
+                        <div class="certificate-ribbon">
+                            <div class="ribbon-content">
+                                <span class="ribbon-icon">🎀</span>
+                                <span class="ribbon-text">Our Love Story Begins Here</span>
+                                <span class="ribbon-icon">🎀</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Memory Lane Timeline -->
+        <section class="timeline-section">
+            <h2 class="section-title">Memory lane 🛤️✨</h2>
+            <div class="timeline">
+                
+                <!-- 📸 MOMENT 1 - The First Meeting -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <div class="timeline-photo clickable-image">
+                            <img src="asset/cutie.jpeg" alt="Our first moment" onclick="openImageModal(this.src)">
+                        </div>
+                        <h3 class="timeline-title">The First Moment – Tution Wala Hi Hello 💫</h3>
+                        <p class="timeline-description">
+                            Hum tution mein mile the. Bas ek casual interaction tha. Ek simple sa "hi", thodi si baat, nothing dramatic. Us waqt na mujhe pata tha, na tujhe… ki yeh normal si mulaqat ek din meri favorite memory ban jayegi. It started so simply, almost ordinary. But maybe the best stories don't start loudly… they just quietly begin.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 📸 MOMENT 2 - The Proposal -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <div class="timeline-photo clickable-image">
+                            <img src="asset/propose.jpeg" alt="The proposal day" onclick="openImageModal(this.src)">
+                        </div>
+                        <h3 class="timeline-title">When Everything Clicked – 13th December 2024 💗</h3>
+                        <p class="timeline-description">
+                            13th December 2024. The day I finally gathered the courage and proposed. Us din sab kuch alag feel ho raha tha. Jaise saare random moments suddenly connect ho gaye ho. That was the day our story officially began. From "what if" to "us." From nervous heartbeats to calling you mine. That date isn't just a memory… it's the day my world changed.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 📸 MOMENT 3 - Hauz Khas Adventure -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <div class="timeline-photo clickable-image">
+                            <img src="asset/kissi.jpeg" alt="Hauz Khas adventure" onclick="openImageModal(this.src)">
+                        </div>
+                        <h3 class="timeline-title">Our Little Adventure – Hauz Khas Chaos 🌈💋</h3>
+                        <p class="timeline-description">
+                            Aur phir woh Hauz Khas monument wala adventure 😭💋<br>
+                            Hum thoda zyada hi pyaar mein kho gaye the… and got caught kissing. Thoda darr, thodi panic, thoda hasi control karna… and then escaping by paying a little bribe like some filmy couple. Honestly, that day wasn't just funny — it felt like we were in our own crazy rom-com scene. Risky? Yes. Worth it? Also yes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 📸 MOMENT 4 - Long Distance Love -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <div class="timeline-photo clickable-image">
+                            <img src="asset/future.jpeg" alt="Our future together" onclick="openImageModal(this.src)">
+                        </div>
+                        <h3 class="timeline-title">Right Now – Long Distance, Same Heart ✨</h3>
+                        <p class="timeline-description">
+                            Ab long distance hai. Screens ke through smiles, calls ke through hugs, aur "goodnight" messages ke through comfort. It's not always easy. Kabhi kabhi missing you hurts more than I show. But even with miles between us, I feel you with me. Our love didn't shrink with distance… it grew stronger. We're not just surviving long distance — we're building something that's patient, deep, and real.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: Secret Surprise -->
+        <section class="surprise-section">
+            <h2 class="section-title">One last thing… 🎁</h2>
+            <div class="surprise-container">
+                <button class="btn btn-primary btn-large" id="surpriseBtn" onclick="revealSurprise()">
+                    Open your surprise 🎁
+                </button>
+                
+                <!-- Hidden message box (revealed on click) -->
+                <div class="hidden-message" id="hiddenMessage">
+                    <div class="card surprise-card" style="background-image: linear-gradient(rgba(255, 255, 255, 0.96), rgba(255, 248, 250, 0.98)), url('asset/future.jpeg'); background-size: cover; background-position: center; background-blend-mode: overlay; box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.8);">
+                        <div class="surprise-icon">💝</div>
+                        <!-- ✏️ EDIT YOUR FINAL SURPRISE MESSAGE HERE -->
+                        <h3 class="surprise-title" style="color: #E85D88; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);">You are my everything… 💖</h3>
+                        <p class="surprise-text" style="color: #3a3a3a; font-weight: 500; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);">
+                            …aur yeh line main bas likh nahi raha, main feel karta hoon.
+                        </p>
+                        <p class="surprise-text" style="color: #3a3a3a; font-weight: 500; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);">
+                            Teri ek smile bas… literally meri saari tension dissolve kar deti hai. Chahe din kitna bhi heavy ho, kitni bhi problems ho, jab tu hasta hai na, it feels like someone pressed reset on my heart. Teri smile meri therapy hai, meri peace hai.
+                        </p>
+                        <p class="surprise-text" style="color: #3a3a3a; font-weight: 500; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);">
+                            Aur tera sweet tone… the way you talk softly, thoda sa pyaar se, thoda sa nakhre se… it excites me in the most innocent way. I swear, kabhi kabhi tu aise baat karti hai ki main ekdum chhota baccha ban jaata hoon. All serious, mature version of me just disappears. Bas main aur meri beboo ki awaaz.
+                        </p>
+                        <p class="surprise-text" style="color: #3a3a3a; font-weight: 500; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);">
+                            Jab tu mujhe "kuku", "beboo", ya phir "ganda aadmi" bolti hai na… I pretend I'm cool about it, but andar se main full blush kar raha hota hoon. It makes me playful, stupid, happy. Like I belong somewhere safe. Like I'm yours.
+                        </p>
+                        <p class="surprise-text" style="color: #3a3a3a; font-weight: 500; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);">
+                            Kabhi kabhi main future imagine karta hoon… hum dono thode buddhe, thode white baal, thode slow walks… but still tu mujhe tease kar rahi hogi, main tujhe irritate kar raha hoga, aur beech beech mein pyaar se smile share karenge. I don't just see you in my present… I see you in my forever.
+                        </p>
+                        <p class="surprise-text" style="color: #3a3a3a; font-weight: 500; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);">
+                            You make my sorrow lighter, my heart softer, my days brighter. Tu sirf meri girlfriend nahi hai… tu meri comfort hai, meri excitement hai, meri aadat hai.
+                        </p>
+                        <p class="surprise-text-small" style="font-size: 1.3rem; margin-top: 1.5rem; color: #E85D88; font-weight: 600; text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);">
+                            You are my everything. 💖
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <button class="btn btn-primary" onclick="window.location.href='yes.html'">
+                Next: Our Gallery 📸 →
+            </button>
+            <button class="btn btn-primary" onclick="window.location.href='kissi.html'">
+                Kissi please 💋
+            </button>
+            <button class="btn btn-secondary" onclick="window.location.href='index.html'">
+                ← Back home
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="cute-footer">
+        made with love 🥺
+    </footer>
+
+    <!-- Image Modal for full-size view -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption">Click anywhere to close</div>
+    </div>
+
+    <!-- Canvas for heart burst animation -->
+    <canvas id="heartBurstCanvas"></canvas>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

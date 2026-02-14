@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kissi Please 💋</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="kissi-page">
+    <!-- 
+    ═══════════════════════════════════════════════════════════════
+    📝 KISSI PAGE - Special Request Page
+    ═══════════════════════════════════════════════════════════════
+    
+    This page is all about asking for kisses in the cutest way possible!
+    Background: kissi.jpeg with romantic overlay
+    
+    ═══════════════════════════════════════════════════════════════
+    -->
+
+    <!-- Background with blur and overlay -->
+    <div class="hero-bg" style="background-image: url('asset/kissi.jpeg');"></div>
+    <div class="overlay-bg" style="background: linear-gradient(135deg, 
+        rgba(255, 143, 171, 0.88) 0%, 
+        rgba(255, 107, 157, 0.90) 50%,
+        rgba(232, 93, 136, 0.88) 100%);"></div>
+
+    <!-- Floating hearts animation -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Main content -->
+    <div class="hero-container">
+        <div class="hero-content" style="animation: bounceIn 1s ease-out;">
+            <div style="font-size: 5rem; margin-bottom: 1rem; animation: heartbeat 1.5s ease-in-out infinite;">
+                💋
+            </div>
+            <h1 class="hero-title" style="animation: slideDown 0.8s ease-out;">
+                Mujhe kissi chahiye! 💕
+            </h1>
+            <p class="hero-subtitle" style="font-size: 1.4rem; animation: slideDown 1s ease-out 0.2s both;">
+                Bahut saari kissi... 😘
+            </p>
+            
+            <div class="card" style="max-width: 600px; margin: 2rem auto; background: rgba(255, 255, 255, 0.95); animation: slideUp 1s ease-out 0.4s both;">
+                <h2 style="color: #FF6B9D; margin-bottom: 1rem; font-size: 1.8rem;">Kissi Manifesto 💖</h2>
+                
+                <div style="text-align: left; font-size: 1.1rem; line-height: 1.8; color: #4A4A4A;">
+                    <p style="margin-bottom: 1rem;">
+                        <strong>Morning kissi:</strong> Din ki shuruaat achi ho jaye ☀️
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>Goodnight kissi:</strong> Neend bhi achhi aaye, sapne bhi sweet aaye 🌙
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>Random kissi:</strong> Bina kisi reason ke, bas aise hi 💕
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>Manane wali kissi:</strong> Kalesh ke baad, sabse zaroori 🥺
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>Celebration kissi:</strong> Kuch bhi achha ho jaye toh 🎉
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>I-miss-you kissi:</strong> When I can't see you but need to feel close 💗
+                    </p>
+                    <p style="margin-bottom: 1rem; font-size: 1.3rem; color: #FF6B9D; font-weight: bold; text-align: center; margin-top: 1.5rem;">
+                        In short... kissi ALWAYS chahiye! 💋💋💋
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" style="max-width: 600px; margin: 2rem auto; background: rgba(255, 229, 236, 0.95); border: 3px solid #FF6B9D; animation: slideUp 1.2s ease-out 0.6s both;">
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #4A4A4A; margin-bottom: 1rem;">
+                    Tere kissi mein kuch alag hi baat hai. It's not just a kiss... it's comfort, it's love, it's home. 
+                    Jab tu kiss karti hai na, everything just feels right. ❤️
+                </p>
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #4A4A4A;">
+                    So beboo... please keep them coming. Main hamesha ready hoon! 😘💕
+                </p>
+            </div>
+
+            <p class="hero-subtitle" style="margin-top: 2rem; font-size: 1.1rem; animation: fadeIn 1.5s ease-out 0.8s both;">
+                (P.S. - Main kabhi bhi nahi bolunga "bas ab bahut ho gaya" 😂)
+            </p>
+
+            <div class="button-group" style="margin-top: 2rem; animation: slideUp 1.2s ease-out 1s both;">
+                <button class="btn btn-primary" onclick="giveKissi()" style="font-size: 1.3rem; padding: 1.2rem 3rem;">
+                    Okay, kissi de doon? 💋
+                </button>
+            </div>
+
+            <div class="button-group" style="margin-top: 1.5rem;">
+                <button class="btn btn-secondary" onclick="window.location.href='yes.html'">
+                    ← Back to gallery
+                </button>
+                <button class="btn btn-secondary" onclick="window.location.href='index.html'">
+                    Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="cute-footer">
+        made with love 🥺
+    </footer>
+
+    <!-- Kissi burst canvas -->
+    <canvas id="kissiBurstCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999;"></canvas>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Special kissi burst animation
+        function giveKissi() {
+            playPopSound();
+            triggerKissiBurst();
+            
+            setTimeout(() => {
+                alert("💋💋💋 Yayyyy! Thank you beboo! I love your kissi! 💕💕💕");
+            }, 500);
+        }
+
+        function triggerKissiBurst() {
+            const canvas = document.getElementById('kissiBurstCanvas');
+            if (!canvas) return;
+            
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const kissiCount = 50;
+            const kissis = [];
+            const kissiEmojis = ['💋', '😘', '💕', '💖', '💗', '❤️'];
+            
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            
+            // Create kiss particles
+            for (let i = 0; i < kissiCount; i++) {
+                const angle = (Math.PI * 2 * i) / kissiCount;
+                kissis.push({
+                    x: centerX,
+                    y: centerY,
+                    vx: Math.cos(angle) * (Math.random() * 4 + 3),
+                    vy: Math.sin(angle) * (Math.random() * 4 + 3),
+                    emoji: kissiEmojis[Math.floor(Math.random() * kissiEmojis.length)],
+                    size: Math.random() * 25 + 25,
+                    life: 1.0,
+                    rotation: Math.random() * 360
+                });
+            }
+            
+            // Animate kisses
+            function animateKissis() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                let stillAlive = false;
+                
+                kissis.forEach(kissi => {
+                    kissi.x += kissi.vx;
+                    kissi.y += kissi.vy;
+                    kissi.vy += 0.15; // Gravity
+                    kissi.rotation += 5;
+                    kissi.life -= 0.008;
+                    
+                    if (kissi.life > 0) {
+                        ctx.save();
+                        ctx.globalAlpha = kissi.life;
+                        ctx.translate(kissi.x, kissi.y);
+                        ctx.rotate(kissi.rotation * Math.PI / 180);
+                        ctx.font = kissi.size + 'px Arial';
+                        ctx.fillText(kissi.emoji, 0, 0);
+                        ctx.restore();
+                        stillAlive = true;
+                    }
+                });
+                
+                if (stillAlive) {
+                    requestAnimationFrame(animateKissis);
+                } else {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }
+            }
+            
+            animateKissis();
+        }
+
+        // Heartbeat animation for the main kiss emoji
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes heartbeat {
+                0%, 100% { transform: scale(1); }
+                25% { transform: scale(1.2); }
+                50% { transform: scale(1); }
+                75% { transform: scale(1.15); }
+            }
+            @keyframes bounceIn {
+                0% { transform: scale(0); opacity: 0; }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); opacity: 1; }
+            }
+            .kissi-page .hero-bg {
+                filter: blur(5px);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

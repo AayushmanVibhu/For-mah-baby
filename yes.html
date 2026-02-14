@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yayyy 💖</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="yes-page">
+    <!-- 
+    ═══════════════════════════════════════════════════════════════
+    📝 CUSTOMIZATION NOTES:
+    ═══════════════════════════════════════════════════════════════
+    
+    1. PHOTO GALLERY:
+       - Replace images in the polaroid cards below
+       - Currently using: us.jpeg, us2.jpeg, us3.jpeg, together.jpeg, handinhand.jpeg
+       - Update the alt text to describe each photo
+    
+    2. YOUR PERSONAL MESSAGES:
+       - Find the 3 paragraphs with IDs: message1, message2, message3
+       - Replace the placeholder text with your own words
+    
+    3. REASONS YOU ADORE HER:
+       - Find the accordion items (reason1-reason5)
+       - Write your own cute reasons!
+    
+    ═══════════════════════════════════════════════════════════════
+    -->
+
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1 class="page-title">Yayyy 💖</h1>
+        <p class="page-subtitle">okay now come read this, cutie</p>
+    </header>
+
+    <!-- Main content -->
+    <main class="content-wrapper">
+        
+        <!-- SECTION 1: Photo Gallery -->
+        <section class="gallery-section">
+            <h2 class="section-title">Our little gallery 📸</h2>
+            <div class="polaroid-grid">
+                <!-- 📸 Photo 1 - Replace with your image -->
+                <div class="polaroid clickable-image" onclick="openImageModal('asset/us.jpeg')">
+                    <div class="tape tape-1"></div>
+                    <img src="asset/us.jpeg" alt="Us together">
+                    <p class="polaroid-caption">us 💕</p>
+                </div>
+                
+                <!-- 📸 Photo 2 - Replace with your image -->
+                <div class="polaroid clickable-image" onclick="openImageModal('asset/us2.jpeg')">
+                    <div class="tape tape-2"></div>
+                    <img src="asset/us2.jpeg" alt="Us having fun">
+                    <p class="polaroid-caption">always smiling with you</p>
+                </div>
+                
+                <!-- 📸 Photo 3 - Replace with your image -->
+                <div class="polaroid clickable-image" onclick="openImageModal('asset/us3.jpeg')">
+                    <div class="tape tape-1"></div>
+                    <img src="asset/us3.jpeg" alt="Beautiful moment">
+                    <p class="polaroid-caption">my favorite person</p>
+                </div>
+                
+                <!-- 📸 Photo 4 - Replace with your image -->
+                <div class="polaroid clickable-image" onclick="openImageModal('asset/together.jpeg')">
+                    <div class="tape tape-2"></div>
+                    <img src="asset/together.jpeg" alt="Together forever">
+                    <p class="polaroid-caption">together 🌸</p>
+                </div>
+                
+                <!-- 📸 Photo 5 - Replace with your image -->
+                <div class="polaroid clickable-image" onclick="openImageModal('asset/handinhand.jpeg')">
+                    <div class="tape tape-1"></div>
+                    <img src="asset/handinhand.jpeg" alt="Hand in hand">
+                    <p class="polaroid-caption">hand in hand</p>
+                </div>
+                
+                <!-- 📸 Photo 6 - New image -->
+                <div class="polaroid clickable-image" onclick="openImageModal('asset/us5.jpeg')">
+                    <div class="tape tape-2"></div>
+                    <img src="asset/us5.jpeg" alt="Our special moments">
+                    <p class="polaroid-caption">special moments 💫</p>
+                </div>
+                
+                <!-- 📸 Photo 7 - New image -->
+                <div class="polaroid clickable-image" onclick="openImageModal('asset/us6.jpeg')">
+                    <div class="tape tape-1"></div>
+                    <img src="asset/us6.jpeg" alt="Making memories">
+                    <p class="polaroid-caption">making memories 🌟</p>
+                </div>
+                
+                <!-- 📸 Photo 8 - New image -->
+                <div class="polaroid clickable-image" onclick="openImageModal('asset/us7.jpeg')">
+                    <div class="tape tape-2"></div>
+                    <img src="asset/us7.jpeg" alt="Forever yours">
+                    <p class="polaroid-caption">forever yours 💖</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Personal Note -->
+        <section class="note-section">
+            <h2 class="section-title">A note for you 💌</h2>
+            <div class="card note-card">
+                <!-- ✏️ MESSAGE 1 - Write your first paragraph here -->
+                <p id="message1" class="note-text">
+                    I used to be someone who ran away from the very idea of love. I never really understood what it meant or why people made such a big deal about it. And then you happened. Because of you, I didn't just learn what love is… I felt it.
+                </p>
+                
+                <!-- ✏️ MESSAGE 2 - Write your second paragraph here -->
+                <p id="message2" class="note-text">
+                    Roz tere expressions ki talash karna, subeh uth bhi jaun phir bhi tere uthane ka wait karna, khana khaya ho ya nahi but tere kissi ke liye hamesha bhookha rehna, kalesh ke baad pyaar se manana… all these little things, these ups and downs, these silly fights and warm makeups — they've made life so much more colorful and beautiful. With you, even ordinary days feel special. I know I irritate you sometimes, thoda zyada hi. But sach mein, I want to become someone who can always bring a smile to your face, someone who makes your day lighter and happier.
+                </p>
+                
+                <!-- ✏️ MESSAGE 3 - Write your third paragraph here -->
+                <p id="message3" class="note-text">
+                    That's why I wanted to do something a little special for us. Ye meri taraf se ek chhoti si koshish hai. Haath se beautiful cheezein banana shayad nahi aata, but CS ka hoon… so I used the only skills I know to build something for you. I want to make you fall in love with living every occasion again. I want to be the reason your heart feels safe, excited, and full. And in return… mujhe khoob saari kissi chahiye. 💋💖<br><br>Happy Valentine's Day, my love.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Reasons Accordion -->
+        <section class="reasons-section">
+            <h2 class="section-title">Reasons I adore you 🥰</h2>
+            <div class="accordion">
+                <!-- ✏️ REASON 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>The way you smile and fix my whole world ✨</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p id="reason1">
+                            Teri smile mein sach mein koi magic hai. Jab tu hasta hai na, mera mood automatically shift ho jaata hai. Even if I'm stressed, overthinking, ya thoda low, ek teri genuine si smile makes everything feel lighter. It's like my heart just knows it's safe when you're happy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ✏️ REASON 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>The way you talk to me in that soft, sweet tone 💝</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p id="reason2">
+                            Tera pyaar se baat karna, thoda nakhre ke saath, thoda innocence ke saath… it melts me. Kabhi kabhi main literally ek chhota baccha ban jaata hoon because of how cute you sound. That tone isn't just cute, it makes me feel wanted, special, and ridiculously excited for no reason.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ✏️ REASON 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>The way you call me kuku, beboo, and even ganda aadmi 🌈</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p id="reason3">
+                            Jab tu mujhe in naamon se bulati hai na, main bahar se cool rehne ki acting karta hoon but andar se full blush ho raha hota hoon. Those names are ours. They make everything playful. They remind me that hum sirf serious love nahi karte… hum hasi mazaak, tang karna, aur cute teasing wala love bhi karte hain.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ✏️ REASON 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>The way we fight… and love even harder after 🌟</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p id="reason4">
+                            Haan, kabhi kabhi kalesh ho jaata hai. But what I adore is how we always come back to each other. How we manao each other with extra pyaar. Those ups and downs don't break us, they make us stronger. They make our story real, not perfect — but beautiful.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ✏️ REASON 5 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>The way you made me believe in love 💖</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p id="reason5">
+                            Main woh banda tha jo love ke concept se bhaagta tha. Mujhe lagta tha it's not for me. But tu aayi, and suddenly I understood why people write poems, make promises, imagine futures. You didn't just become part of my life — you changed the way I see it.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ✏️ REASON 6 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>The way you make ordinary days feel special 🎨</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p id="reason6">
+                            Chahe simple calls ho, random conversations ho, ya bas tere expressions dekhna… everything feels colorful with you. Zindagi pehle black and white thi shayad, but with you it has shades, warmth, and excitement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ✏️ REASON 7 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>The future I see with you 💫</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p id="reason7">
+                            Main sirf aaj ka nahi sochta. Kabhi kabhi imagine karta hoon hum dono buddhe ho kar bhi ek dusre ko irritate kar rahe hain, tease kar rahe hain, aur beech beech mein pyaar se muskura rahe hain. I adore that with you, I don't just see moments… I see forever.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <button class="btn btn-secondary" onclick="window.location.href='hellyes.html'">
+                ← Back to Certificate
+            </button>
+            <button class="btn btn-primary" onclick="window.location.href='kissi.html'">
+                Kissi please 💋
+            </button>
+            <button class="btn btn-secondary" onclick="window.location.href='index.html'">
+                Back home
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="cute-footer">
+        made with love 🥺
+    </footer>
+
+    <!-- Image Modal for full-size view -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption">Click anywhere to close</div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
